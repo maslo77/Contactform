@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1 class="brand"><span>Firma</span>-Formularz Kontaktowy</h1>
-        <div class="wrapper animated bounceInRight">
+        <div class="wrapper">
             <div class="company-info">
             <h3>Dane Firmy</h3>
             <ul>
@@ -23,34 +23,38 @@
             </div>
             <div class="contact">
                 <h3>Napisz do nas:</h3>
-                <form >
+                <div class="alert">Twoja wiadomość została wysłana!</div>
+
+                <form id="Contactform">
                     <p>
                         <label>Imię</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" id="name" required>
                     </p>
                     <p>
                         <label>Firma</label>
-                        <input type="text" name="company">
+                        <input type="text" name="company" id="company">
                     </p>
                     <p>
                         <label>E-mail</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" id="email" required>
                     </p>
                     <p>
                         <label>Telefon</label>
-                        <input type="text" name="phone">
+                        <input type="text" name="phone" id="phone">
                     </p>                               
                     <p class="full">
                         <label>Wiadomość</label>
-                        <textarea name="message" rows="5"></textarea>
+                        <textarea name="message" rows="5" id="message"></textarea>
                     </p>
                     <p class="full">
-                        <button>Wyślij</button>
+                        <button type="submit">Wyślij</button>
                     </p>
     
                 </form>
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
